@@ -75,7 +75,7 @@ void inOrder(struct Node *root)
     inOrder(root->right);
 }
 
-//Root - Left - Right
+
 void preOrder(struct Node *root)
 {
     if (root == NULL)
@@ -84,8 +84,7 @@ void preOrder(struct Node *root)
     preOrder(root->left);
     preOrder(root->right);
 }
-
-//Left - Right - Root
+
 void postOrder(struct Node *root)
 {
     if (root == NULL)
@@ -100,7 +99,7 @@ void levelOrder(struct Node *root)
 {
     if (root == NULL)
         return;
-    struct Node *queue[100]; //Static Queue for simplicity, assuming max 100 nodes
+    struct Node *queue[100];
     int front = 0, rear = 0;
     queue[rear++] = root;
     while (front < rear)
