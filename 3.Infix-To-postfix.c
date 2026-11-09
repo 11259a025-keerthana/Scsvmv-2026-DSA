@@ -73,7 +73,7 @@ void infixToPostfix(char infix[], char postfix[])
      
         else if (isOperator(c))
         {
-            // Step 4.II.A: Check if stack is empty OR top has lower precedence OR top is '('
+           
             if (top == -1 || precedence(peek()) < precedence(c) || peek() == '(')
             {
                 
@@ -86,12 +86,12 @@ void infixToPostfix(char infix[], char postfix[])
                 {
                     postfix[j++] = pop();
                 }
-                // Then push the current operator onto the stack
+                
                 push(c);
             }
         }
 
-        // Step 4.III: If token is '('
+       
         else if (c == '(')
         {
             // Push it onto the stack
@@ -114,7 +114,7 @@ void infixToPostfix(char infix[], char postfix[])
         }
     }
 
-    // Step 6: Pop any remaining operators from the stack
+    
     while (top != -1)
     {
         postfix[j++] = pop();
