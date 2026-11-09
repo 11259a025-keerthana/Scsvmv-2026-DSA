@@ -72,7 +72,7 @@ void deleteItem()
 
     REAR = REAR - 1; 
 
-    /* Reset queue if it becomes empty */
+    
     if (REAR < FRONT)
     {
         FRONT = -1;
