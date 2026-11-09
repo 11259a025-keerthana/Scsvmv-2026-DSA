@@ -26,7 +26,7 @@ struct Node *insert(struct Node *root, int dataToInsert)
     else if (dataToInsert > root->rollNo)
         root->right = insert(root->right, dataToInsert);
 
-    return root; // Returning the updated tree's root pointer
+    return root; 
 }
 
 struct Node *findMin(struct Node *root)
